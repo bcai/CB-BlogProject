@@ -1,3 +1,39 @@
 /*
 Author: Brandon Cai, Connie Xu
 */
+
+html {
+	background: url(../images/background.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+#logo, #title{
+	display:inline-block;
+	max-height: 110px;
+
+
+}
+#logo{
+	float:left;
+	width:23%;
+}
+
+#title{
+	float:left;
+	width:77%;
+	font-family:Papyrus,Garamond;
+	font-size: 2em;
+	text-align: center;
+}
+#title>h1{
+	margin: 0;
+	margin-top:20px;
+}
+
+p{
+	font-family: Papyrus;
+	font-size: 1.5em;
+}
