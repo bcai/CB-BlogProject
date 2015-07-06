@@ -2,38 +2,85 @@
 Author: Brandon Cai, Connie Xu
 */
 
+/*
 html {
-	background: url(../images/background.jpg) no-repeat center center fixed;
+	background: url(../images/blank.ppg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	} */
+
+body{
+	background-color: black;
+	min-width: 740px;  /* controls nav drawer from shifting down */
 }
 
-#logo, #title{
-	display:inline-block;
-	max-height: 110px;
 
+
+
+
+/* <-- Header --> */
+
+#logo, #title, #nav{
+	display: inline-block;
+	max-height: 110px;
 
 }
 #logo{
-	float:left;
-	width:23%;
+	float: left;
+	width: 13.5%;
+	margin-top: 15px; /* align logo & title */
+	margin-left:5px;
 }
 
 #title{
-	float:left;
-	width:77%;
-	font-family:Papyrus,Garamond;
-	font-size: 2em;
+	float: left;
+	width: 73%;
 	text-align: center;
+	font-family: sans-serif;
+	font-size: 0.8em;
+	letter-spacing: 7.5px;
+	text-transform: uppercase;
 }
 #title>h1{
 	margin: 0;
-	margin-top:20px;
+	margin-top: 28px; /* align logo & title */
+	margin-bottom: 0px;
+	color: white;
+}
+#drawer{
+	float:right;
+	margin-top: 20px;
+	margin-right: 10px;
+}
+#nav{
+	float:right;
+	padding-left:0px;
+
+}
+#nav.js{
+	display:none;
+	text-align:right;
+}
+#menu{
+	background-color:;
+	color:#fff;
+	display: block;
+	font-size:2em;
+	text-align: right;
+	cursor:pointer;
+}
+#nav>li>a{
+	font-family:sans-serif;
+	color:#fff;
+	font-size: 1em;
+	text-decoration: none;
 }
 
+
+
 p{
-	font-family: Papyrus;
+	font-family: Garamond;
 	font-size: 1.5em;
 }
