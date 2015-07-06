@@ -5,4 +5,12 @@ $(document).ready(function() {
 	$("#menu").click(function(){
 		$("#nav").slideToggle();
 	});
+
+
+	$("#logobox").mouseenter(function(){
+		$("#overlay").stop().fadeIn();
+	});
+	$("#logobox").mouseleave(function(){
+		$("#overlay").stop().fadeOut();
+	});
 });

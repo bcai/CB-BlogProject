@@ -13,7 +13,7 @@ html {
 
 body{
 	background-color: black;
-	min-width: 740px;  /* controls nav drawer from shifting down */
+	min-width: 770px;  /* controls nav drawer from shifting down */
 }
 
 
@@ -25,13 +25,23 @@ body{
 #logo, #title, #nav{
 	display: inline-block;
 	max-height: 110px;
-
+}
+#logobox{
+	position:relative;
 }
 #logo{
 	float: left;
 	width: 13.5%;
 	margin-top: 15px; /* align logo & title */
 	margin-left:5px;
+	z-index:0;
+}
+#overlay{
+	display:none;
+	position:absolute;
+	margin-left: 5px;
+	margin-top: 15px;
+	z-index: 1;
 }
 
 #title{
@@ -65,13 +75,26 @@ body{
 	margin-bottom: 2px; /* spacing between nav button and menu */
 }
 #menu{
-	background-color:;
 	color:#fff;
 	display: block;
 	font-size:2em;
 	text-align: right;
 	cursor:pointer;
+
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
 }
+#menu:hover {
+	color:#98b1c4;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+}​
 #nav>li{
 	padding:2px;
 }
