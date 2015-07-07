@@ -13,104 +13,30 @@ html {
 
 body{
 	background-color: black;
-	min-width: 770px;  /* controls nav drawer from shifting down */
+	min-width: 925px;  /* controls nav drawer from shifting down */
+}
+.grid{
+	display:inline-block;
+	margin: 1em;
 }
 
-
-
-
-
-/* <-- Header --> */
-
-#logo, #title, #nav{
-	display: inline-block;
-	max-height: 110px;
-}
-#logobox{
+#primary{
 	position:relative;
+	margin-top:3em;
+	margin-left:3em;
+	margin-right:3em;
+	max-width: 100%; /*controls sizing of primary*/
+	max-height: 100%;
+	min-width: 400px;
+	min-height: 600px;
+	overflow: hidden;
 }
-#logo{
-	float: left;
-	width: 13.5%;
-	margin-top: 15px; /* align logo & title */
-	margin-left:5px;
-	z-index:0;
+#primary img{
+	width:100%; /* maintains full sizing of image */
 }
-#overlay{
-	display:none;
-	position:absolute;
-	margin-left: 5px;
-	margin-top: 15px;
-	z-index: 1;
-}
-
-#title{
-	float: left;
-	width: 73%;
-	text-align: center;
-	font-family: sans-serif;
-	font-size: 0.8em;
-	letter-spacing: 7.5px;
-	text-transform: uppercase;
-}
-#title>h1{
-	margin: 0;
-	margin-top: 28px; /* align logo & title */
-	margin-bottom: 0px;
-	color: white;
-}
-#drawer{
-	float:right;
-	margin-top: 20px;
-	margin-right: 10px;
-}
-#nav{
-	float:right;
-	padding-left:0px;
-
-}
-#nav.js{
-	display:none;
-	text-align:right;
-	margin-bottom: 2px; /* spacing between nav button and menu */
-}
-#menu{
-	color:#fff;
-	display: block;
-	font-size:2em;
-	text-align: right;
-	cursor:pointer;
-
-	-o-transition:.5s;
-	-ms-transition:.5s;
-	-moz-transition:.5s;
-	-webkit-transition:.5s;
-	transition:.5s;
-}
-#menu:hover {
-	color:#98b1c4;
-	-o-transition:.5s;
-	-ms-transition:.5s;
-	-moz-transition:.5s;
-	-webkit-transition:.5s;
-	transition:.5s;
-}​
-#nav>li{
-	padding:2px;
-}
-#nav>li>a{
-	font-family:sans-serif;
-	color:#fff;
-	font-size: 1em;
-	text-decoration: none;
-}
-#nav>li>a:hover{
-	color:#98b1c4;
-}
-
 
 
 p{
 	font-family: Garamond;
-	font-size: 1.5em;
+	font-size: 1em;
 }

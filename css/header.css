@@ -1,0 +1,94 @@
+/* <-- Header --> */
+
+#logo, #title, #nav{
+	display: inline-block;
+	max-height: 110px;
+}
+#logobox{
+	position:relative;
+}
+#logo{
+	float: left;
+	width: 13.5%;
+	margin-top: 2.7em; /* align logo & title */
+	margin-left:3em;
+	z-index:0;
+}
+#overlay{
+	display:none;
+	position:absolute;
+	margin-top: 2.7em;
+	margin-left: 3em;
+	z-index: 1;
+}
+
+#title{
+	float: left;
+	width: 66%;
+	margin-top:2em;
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 0.8em;
+	letter-spacing: 7.5px;
+	text-transform: uppercase;
+}
+#title>h1{
+	margin: 0;
+	margin-top: 1em; /* align logo & title */
+	margin-bottom: 0px;
+	color: white;
+}
+#drawer{
+	position:relative;
+	z-index: 99;
+	float:right;
+	margin-top: 2.7em;
+	margin-right: 3em;
+}
+#nav{
+	float:right;
+	padding-left:0px;
+
+}
+#nav.js{
+	display:none;
+	text-align:right;
+	margin-bottom: 2px; /* spacing between nav button and menu */
+}
+#menu{
+	color:#fff;
+	display: block;
+	font-size:2em;
+	text-align: right;
+	cursor:pointer;
+
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+}
+#menu:hover {
+	color:#98b1c4;
+	-o-transition:.5s;
+	-ms-transition:.5s;
+	-moz-transition:.5s;
+	-webkit-transition:.5s;
+	transition:.5s;
+}​
+#nav>ul{
+	list-style-type: none;
+}
+#nav>li{
+	list-style-type: none;
+	padding:2px;
+}
+#nav>li>a{
+	font-family:sans-serif;
+	color:#fff;
+	font-size: 1em;
+	text-decoration: none;
+}
+#nav>li>a:hover{
+	color:#98b1c4;
+}
