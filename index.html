@@ -5,10 +5,10 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
 	<link href="css/header.css" rel="stylesheet" type="text/css"/>
 	<link href="css/style.css" rel="stylesheet" type="text/css"/>
-	<script src="js/jquery-1.11.3.min.js"></script>
-	<script type="text/javascript" src="js/nav.js"></script>
+	<link href="css/slider.css" rel="stylesheet" type="text/css"/>
 	<title>C&B | Redeemed Thought</title>
 </head>
 
@@ -30,7 +30,26 @@
 
 		<!--Primary Content-->
 		<div id="primary" class="grid">
-			<img src="images/FruitOfTheSpirit.jpg" alt="Fruit of the Spirit">
+			<div class="carousel">
+
+				<!-- Slider Panels -->
+				<div class="inner">
+					<div class="slide active">
+						<h1></h1>
+					</div>
+					<div class="slide">
+						<h1></h1>
+					</div>
+					<div class="slide">
+						<h1><h1>
+					</div>
+				</div>
+
+				<!-- Slider Arrows -->
+				<div class="arrow arrow-left"></div>
+				<div class="arrow arrow-right"></div>
+
+			</div>
 		</div>
 
 
@@ -43,5 +62,8 @@
 	<!--Footer-->
 	<footer></footer>
 
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/header.js"></script>
+	<script src="js/slider.js"></script>
 </body>
 </html>

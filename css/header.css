@@ -1,3 +1,6 @@
+/* Author: Brandon Cai, Connie Xu */
+
+
 /* <-- Header --> */
 
 #logo, #title, #nav{
@@ -11,14 +14,14 @@
 	float: left;
 	width: 13.5%;
 	margin-top: 2.7em; /* align logo & title */
-	margin-left:3em;
+	margin-left:4.8%;
 	z-index:0;
 }
 #overlay{
 	display:none;
 	position:absolute;
 	margin-top: 2.7em;
-	margin-left: 3em;
+	margin-left: 4.8%;
 	z-index: 1;
 }
 
@@ -43,7 +46,7 @@
 	z-index: 99;
 	float:right;
 	margin-top: 2.7em;
-	margin-right: 3em;
+	margin-right: 5%;
 }
 #nav{
 	float:right;
