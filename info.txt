@@ -1,0 +1,4 @@
+Regarding Entries:
+Entries to the blog will be written in .txt files.
+Entries will be manually added to the "entries" folder.
+Entries will be read into an existing html/css template via a PHP loop.

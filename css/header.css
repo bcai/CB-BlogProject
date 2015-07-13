@@ -14,14 +14,14 @@
 	float: left;
 	width: 13.5%;
 	margin-top: 2.7em; /* align logo & title */
-	margin-left:4.8%;
+	margin-left:5%;
 	z-index:0;
 }
 #overlay{
 	display:none;
 	position:absolute;
 	margin-top: 2.7em;
-	margin-left: 4.8%;
+	margin-left: 5%;
 	z-index: 1;
 }
 

@@ -15,25 +15,39 @@ body{
 	background-color: black;
 	min-width: 844px;  /* controls nav drawer from shifting down */
 }
-.grid{
-	display:inline-block;
-	margin: 1em;
-}
 
 #primary{
+	display:inline-block;
+	margin: 1em;
 	position:relative;
 	margin-top:3em;
-	margin-left:4.8%;
+	margin-left: 5%; /*4.8%;*/
 	margin-right:5%;
+	margin-bottom:2em;
 	max-width: 100%; /*controls sizing of primary*/
 	max-height: 100%;
 	min-width: 400px;
-	min-height: 600px;
 	width:90%;
 	overflow: hidden;
 }
 #primary img{
 	width:100%; /* maintains full sizing of image */
+}
+
+.grid{
+	display:inline-block;
+	width: 22%;
+	height: 100%;
+	margin-right: 2em;
+	margin-bottom: 2em;
+}
+#secondary img{
+	width:100%;
+}
+
+#secondary{
+	margin-left: 5%;/*3.6%;*/
+	margin-right:2%; /*3.3%;*/
 }
 
 
