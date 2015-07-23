@@ -53,11 +53,13 @@
 			</div>
 		</div>
 
+		<!--Secondary Header-->
+		<h1 class="divider">Thoughts</h1>
+
 
 		<!--Secondary Content-->
 		<div id="secondary">
 			<div class="effect-6 effects am-container" id="am-container" style="width:91.2%;margin:0px auto;">
-				<!--<div class="effect-6" class="effects">--> <!--class="effects clearfix"-->
 					<?php
 						$types = array("png","jpg");
 						$dir = "images/entries";
@@ -70,7 +72,6 @@
 							}
 						}
 					?>
-				<!--</div>-->
 			</div>
 		</div>
 	</div>
