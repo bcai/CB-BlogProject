@@ -1,0 +1,104 @@
+/* ============================================================
+  GLOBAL
+============================================================ */
+.overlay {
+  display: block;
+  position:absolute;
+  z-index: 20;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+a.overlink{
+  display:block;
+  position:absolute;
+  z-index: 20;
+  overflow:hidden;
+  cursor: pointer;
+  width:100%;
+  height:100%;
+}
+
+a.close-overlay {
+  display: block;
+  position:absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 45px;
+  text-align: center;
+  background-color: #000;
+  cursor: pointer;
+}
+a.close-overlay.hidden {
+  display: none;
+}
+
+a.dropdown {
+  display: block;
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+  /* border: solid 5px #fff; */
+  text-align: center;
+  color: #fff;
+  line-height: 50px;
+  font-weight: 700;
+  font-size: 30px;
+  /*
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  border-radius: 30px; */
+}
+a:link {
+  text-decoration: none;
+}
+a:hover{ 
+  color:#c8d7e3;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+
+/*============================================================
+  EFFECT 6 - ICON SLIDE IN
+============================================================ */
+.effect-6 .overlay {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+}
+.effect-6 .overlay a.dropdown{
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.effect-6 .img.hover .overlay {
+  opacity: 1;
+}
+.effect-6 .img.hover .overlay a.dropdown {
+  top: 50%;
+  margin-top: -30px;
+  opacity: 1;
+}
