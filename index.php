@@ -59,7 +59,7 @@
 
 		<!--Secondary Content-->
 		<div id="secondary">
-			<div class="effect-6 effects am-container" id="am-container" style="width:91.2%;margin:0px auto;">
+			<div class="effect-6 am-container" id="am-container" style="width:100%;max-width:77em;margin:0px auto;display:block;">
 					<?php
 						$types = array("png","jpg");
 						$dir = "images/entries";
@@ -77,7 +77,8 @@
 	</div>
 
 	<!--Footer-->
-	<footer></footer>
+		<hr style="visibility:hidden;">
+		<div id="footer">&copy; 2015 C&B Redeemed Thought. All rights reserved.</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
 	<script type="text/javascript" src="../js/header.js"></script>
@@ -114,11 +115,11 @@
 	        }
 	    });
 	</script>
-	<script type="text/javascript" src="../js/jquery.montage.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.montage.js"></script>
 	<script type="text/javascript"> // Montage JQuery
 		$(function() {
 			var $container 	= $('#am-container'),
-							$imgs		= $container.find('img').hide(),
+							$imgs		= $container.find('img'),
 							totalImgs	= $imgs.length,
 							cnt			= 0;
 			
