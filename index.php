@@ -78,7 +78,7 @@
 
 	<!--Footer-->
 		<hr style="visibility:hidden;">
-		<div id="footer">&copy; 2015 C&B Redeemed Thought. All rights reserved.</div>
+		<div id="footer">&copy; 2015 C&B Redeemed Thought. All Rights Reserved.</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
 	<script type="text/javascript" src="../js/header.js"></script>
