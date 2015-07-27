@@ -63,29 +63,41 @@ p{
 .divider:after{
 	margin:0 -55% 0 5%;
 }
+
 #secondary{
 	margin-left: 4.8%;
 	margin-right:4.8%;
 	position: relative;
-	float:left;
 } 
-/*
-#secondary{
-	margin-left: 0.3%;
-	position: relative;
-	float:left;
-	width:94%;
-} */
 
+.collage{
 
-.am-wrapper {
-	float:left;
-	position:relative;
-	overflow:hidden;
+    /*This is where you set the padding you want between the images*/
+    padding:10px;
+
 }
-.am-wrapper img{
-	position:absolute;
-	outline:none;
+.collage img{
+    margin:0;
+    padding:0;
+    display:inline-block;
+    vertical-align:bottom;
+    opacity:1;
+
+    /*This is where you set the border you want for the image*/
+    border:3px solid #FFF;
+}
+
+
+/* In this example, this is the main item being resized */
+.image-wrapper{
+    /* to get the fade in effect, set opacity to 0 on the first element within the gallery area */
+    opacity:0;
+    -moz-box-shadow:0px 2px 4px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow:0px 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow:0px 2px 4px rgba(0, 0, 0, 0.1);
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
 }
 
 #footer{

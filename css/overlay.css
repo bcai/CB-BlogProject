@@ -69,14 +69,14 @@ a:hover{
 /*============================================================
   EFFECT 6 - ICON SLIDE IN
 ============================================================ */
-.effect-6 .overlay {
+.effect-overlay .overlay {
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   opacity: 0;
 }
-.effect-6 .overlay a.dropdown{
+.effect-overlay .overlay a.dropdown{
   left: 0;
   right: 0;
   top: 0;
@@ -87,10 +87,10 @@ a:hover{
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
-.effect-6 .img.hover .overlay {
+.effect-overlay .image-wrapper.hover .overlay {
   opacity: 1;
 }
-.effect-6 .img.hover .overlay a.dropdown {
+.effect-overlay .image-wrapper.hover .overlay a.dropdown {
   top: 50%;
   margin-top: -30px;
   opacity: 1;
