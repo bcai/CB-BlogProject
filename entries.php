@@ -109,10 +109,18 @@
 								$file_parts = pathinfo($dir."/".$entry);
 								if(in_array($file_parts['extension'],$types)){
 									$date = $file_parts['filename'];
-									echo "<div class=\"image-wrapper\"><img src=\"" .$dir. "/" .$entry. "\">" . 
-										 "<div class=\"overlay\"><a href=\"../entries.php?entry=" .$date. "\" class=\"overlink\">" . 
-										 "<a href=\"../entries.php?entry=" .$date. "\" class=\"dropdown\">".$date."</a>" . 
-										 "<a class=\"close-overlay hidden\">x</a></a></div></div>"    . "\n";
+									if($date === $_GET['entry']){
+										echo "<div class=\"image-wrapper entry\"><img src=\"" .$dir. "/" .$entry. "\">" . 
+											 "<div class=\"overlay\"><a href=\"../entries.php?entry=" .$date. "\" class=\"overlink\">" . 
+											 "<a href=\"../entries.php?entry=" .$date. "\" class=\"dropdown\">".$date."</a>" . 
+											 "</a></div></div>"    . "\n";
+									}
+									else{
+										echo "<div class=\"image-wrapper\"><img src=\"" .$dir. "/" .$entry. "\">" . 
+											 "<div class=\"overlay\"><a href=\"../entries.php?entry=" .$date. "\" class=\"overlink\">" . 
+											 "<a href=\"../entries.php?entry=" .$date. "\" class=\"dropdown\">".$date."</a>" . 
+											 "<a class=\"close-overlay hidden\">x</a></a></div></div>"    . "\n";
+									}
 								}
 							}
 						}

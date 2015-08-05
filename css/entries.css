@@ -84,3 +84,15 @@ body{
 	font-family: 'IM Fell French Canon', Serif;
 	font-size: 2.4em;
 }
+
+
+/* highlights the entry that is currently being viewed in the grid */
+.entry .overlay{
+	opacity:1;
+}
+
+.entry .overlay a.dropdown{
+	opacity:1;
+	top:50%;
+	margin-top: -30px;
+}
