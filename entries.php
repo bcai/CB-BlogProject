@@ -9,9 +9,12 @@
 
 	<link href="../css/header.css" rel="stylesheet" type="text/css"/>
 	<link href="../css/style.css" rel="stylesheet" type="text/css"/>
-	<link href="../css/slider.css" rel="stylesheet" type="text/css"/>
 	<link href="../css/overlay.css" rel="stylesheet" type="text/css"/>
 	<link href="../css/transitions.css" rel="stylesheet" type="text/css"/>
+	<link href="../css/entries.css" rel="stylesheet" type="text/css"/>
+	<link href="../css/jquery.fancybox.css" rel="stylesheet" type="text/css" media="screen" />
+	<link href='http://fonts.googleapis.com/css?family=IM+Fell+French+Canon' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -32,26 +35,62 @@
 
 		<!--Primary Content-->
 		<div id="primary">
-			<div class="carousel">
+			<?php
+				/* text-container */
+				echo "<div id=\"text-container\">";
+					if(session_status() === PHP_SESSION_NONE) {
+						session_start();
+						//echo session_id();
+					}
+					$textFile; $title; $stack = array();
+					$types = array("png","jpg");
+					$dir = "entries/".$_GET['entry']."/";
+					foreach(scandir($dir) as $entry){
+						if(!is_dir($entry)){
+							// if entry folder contains images, add to image array to add in image-container
+							if(in_array(pathinfo($dir."/".$entry,PATHINFO_EXTENSION),$types)){
+								array_push($stack,$entry);
+							}
+							// identifies txt file for reading and creating entry title header
+							else if(pathinfo($dir."/".$entry, PATHINFO_EXTENSION) == 'txt'){ //should only be one txt file per entry folder
+								$textFile = $dir.$entry; 
+								$title = pathinfo($dir."/".$entry)['filename'];
+							}
+						}
+					}
+					//create the title for text-container
+					echo "<h1 class=\"divider\">".$title."</h1>";
 
-				<!-- Slider Panels -->
-				<div class="inner">
-					<div class="slide active">
-						<h1></h1>
-					</div>
-					<div class="slide">
-						<h1></h1>
-					</div>
-					<div class="slide">
-						<h1><h1>
-					</div>
-				</div>
+					//create the date for text-container
+					$formatDate = date_create(str_replace('.', '-', $_GET['entry']));
+					$date = date_format($formatDate, 'F jS, Y');
+					echo "<h1 id=\"date\">".$date."</h1>";
 
-				<!-- Slider Arrows -->
-				<div class="arrow arrow-left"></div>
-				<div class="arrow arrow-right"></div>
+					//read in text file to text-container
+					$fOpen = fopen($textFile, "r") or die("Unable to open file!");
+					echo fread($fOpen,filesize($textFile));
+					fclose($fOpen);
+				echo "</div>"; //end text-container
 
-			</div>
+
+				/* image-container */
+				echo "<div id=\"image-container\">";
+					//display the image for the entry displayed on the secondary grid
+					$imgDir = "images/entries_img/";
+					if(file_exists($imgDir.$_GET['entry'].".jpg"))
+						echo "<div id=\"wrapper\"><a href=\"".$imgDir.$_GET['entry'].".jpg\" class=\"fancybox\" rel=\"gallery\" title=\"".$title."\"><img src=".$imgDir.$_GET['entry'].".jpg></a></div>";
+					if(file_exists($imgDir.$_GET['entry'].".png"))
+						echo "<div id=\"wrapper\"><a href=\"".$imgDir.$_GET['entry'].".png\" class=\"fancybox\" rel=\"gallery\" title=\"".$title."\"><img src=".$imgDir.$_GET['entry'].".png></a></div>";
+
+					//display the images stored in the image array
+					$i=0;
+					while($i < sizeof($stack)){
+						$filename = pathinfo($dir.$stack[$i])['filename'];
+						echo "<div id=\"wrapper\"><a href=\"".$dir.$stack[$i]."\" class=\"fancybox\" rel=\"gallery\" title=\"".$filename."\"><img src=".$dir.$stack[$i]."></a></div>"; 
+						$i++;
+					}
+				echo "</div>"; //end image-container
+			?>
 		</div>
 
 		<!--Secondary Header-->
@@ -62,10 +101,7 @@
 		<div id="secondary">
 			<div class="effect-overlay collage effect-parent">
 					<?php
-						if(session_status() === PHP_SESSION_NONE) {
-							session_start();
-							//echo session_id();
-						}
+						if(session_status() === PHP_SESSION_NONE) {session_start();}
 						$types = array("png","jpg");
 						$dir = "images/entries_img";
 						foreach (scandir($dir) as $entry){
@@ -91,7 +127,6 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
 	<script type="text/javascript" src="../js/header.js"></script>
-	<script type="text/javascript" src="../js/slider.js"></script>
 	<script type="text/javascript" src="../js/jquery.removeWhitespace.min.js"></script>
 	<script type="text/javascript" src="../js/jquery.collagePlus.min.js"></script>
 
@@ -148,8 +183,8 @@
 	                if ($(this).closest(".").hasClass("hover")) {
 	                    $(this).closest(".image-wrapper").removeClass("hover");
 	                }
-	            }); 
-	        } else { 
+	            });
+	        } else {
 	            // handle the mouseenter functionality
 	            $(".image-wrapper").mouseenter(function(){
 	                $(this).addClass("hover");
@@ -160,6 +195,14 @@
 	            });
 	        }
 	    });
+	</script>
+
+	<!-- FancyBox -->
+	<script type="text/javascript" src="../js/jquery.fancybox.pack.js"></script>
+	<script>
+    $(document).ready(function() {
+        $('.fancybox').fancybox();
+    });
 	</script>
 </body>
 </html>

@@ -1,4 +1,5 @@
 Regarding Entries:
 Entries to the blog will be written in .txt files.
-Entries will be manually added to the "entries" folder.
-Entries will be read into an existing html/css template via a PHP loop.
+Entry text and corresponding img files will be manually added to "entries" folder.
+Entries will be read into an existing html/css template via a PHP loop, corresponding to the images/entries img file.
+

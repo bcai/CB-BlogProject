@@ -1,23 +1,21 @@
 /* Author: Brandon Cai, Connie Xu */
 
-/*
-html {
-	background: url(../images/blank.ppg) no-repeat center center fixed;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-	} */
+
+html, body {
+	margin: 0;
+	padding:0;
+	bottom:0;
+	top:0;
+	right:0;
+	left:0;
+	min-height:100%;
+	min-width:100%;
+}
 
 body{
-	margin:0;
 	margin-top: 0.5em;
 	background-color: black;
 	min-width: 850px;  /* controls nav drawer from shifting down */
-}
-p{
-	font-family: Garamond;
-	font-size: 1em;
 }
 
 #primary{
@@ -84,7 +82,7 @@ p{
     opacity:1;
 
     /*This is where you set the border you want for the image*/
-    border:3px solid #FFF;
+    border:2px solid IVORY;
 }
 
 
@@ -95,15 +93,15 @@ p{
     -moz-box-shadow:0px 2px 4px rgba(0, 0, 0, 0.1);
     -webkit-box-shadow:0px 2px 4px rgba(0, 0, 0, 0.1);
     box-shadow:0px 2px 4px rgba(0, 0, 0, 0.1);
+    /*
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
-    border-radius: 3px;
+    border-radius: 3px; */
 }
 
 #footer{
 	display:block;
 	position:relative;
-	clear:both;
 	text-align: center;
 	margin:10%;
 	margin-top: 3%;
