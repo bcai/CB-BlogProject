@@ -36,15 +36,14 @@
 		<!--Primary Content-->
 		<div id="primary">
 			<?php
-				/* text-container */
-				echo "<div id=\"text-container\">";
-					if(session_status() === PHP_SESSION_NONE) {
-						session_start();
-						//echo session_id();
-					}
-					$textFile; $title; $stack = array();
-					$types = array("png","jpg");
-					$dir = "entries/".$_GET['entry']."/";
+				if(session_status() === PHP_SESSION_NONE) {
+					session_start();
+					//echo session_id();
+				}
+				$txtExist = false; $textFile; $title; $stack = array();
+				$types = array("png","jpg");
+				$dir = "entries/".$_GET['entry']."/";
+				if(file_exists($dir)){
 					foreach(scandir($dir) as $entry){
 						if(!is_dir($entry)){
 							// if entry folder contains images, add to image array to add in image-container
@@ -55,43 +54,59 @@
 							else if(pathinfo($dir."/".$entry, PATHINFO_EXTENSION) == 'txt'){ //should only be one txt file per entry folder
 								$textFile = $dir.$entry; 
 								$title = pathinfo($dir."/".$entry)['filename'];
+								$txtExist = true;
 							}
 						}
 					}
-					//create the title for text-container
-					echo "<h1 class=\"divider\">".$title."</h1>";
+				}
 
-					//create the date for text-container
-					$formatDate = date_create(str_replace('.', '-', $_GET['entry']));
-					$date = date_format($formatDate, 'F jS, Y');
-					echo "<h1 id=\"date\">".$date."</h1>";
+				if($txtExist === true){ //proceed with displaying text contents, else display error message
+					/* create text-container */
+					echo "<div id=\"text-container\">";
+						//create the title for text-container
+						echo "<h1 class=\"divider\">".$title."</h1>";
 
-					//read in text file to text-container
-					$fOpen = fopen($textFile, "r") or die("Unable to open file!");
-					echo fread($fOpen,filesize($textFile));
-					fclose($fOpen);
-				echo "</div>"; //end text-container
+						//create the date for text-container
+						$formatDate = date_create(str_replace('.', '-', $_GET['entry']));
+						$date = date_format($formatDate, 'F jS, Y');
+						echo "<h1 id=\"date\">".$date."</h1>";
+
+						//read in text file to text-container
+						$fOpen = fopen($textFile, "r") or die("Unable to open file!");
+						echo fread($fOpen,filesize($textFile));
+						fclose($fOpen);
+
+					echo "</div>"; //end text-container
+				}
+				else{ // display error message if entry text not located
+					echo "<div id=\"error-message\">".
+						 	"<h2>Sorry! This entry does not exist or has been removed.</h2>".
+						 "</div>";
+				}
 
 
 				/* image-container */
-				echo "<div id=\"image-container\">";
-					//display the image for the entry displayed on the secondary grid
-					$imgDir = "images/entries_img/";
-					if(file_exists($imgDir.$_GET['entry'].".jpg"))
-						echo "<div id=\"wrapper\"><a href=\"".$imgDir.$_GET['entry'].".jpg\" class=\"fancybox\" rel=\"gallery\" title=\"".$title."\"><img src=".$imgDir.$_GET['entry'].".jpg></a></div>";
-					if(file_exists($imgDir.$_GET['entry'].".png"))
-						echo "<div id=\"wrapper\"><a href=\"".$imgDir.$_GET['entry'].".png\" class=\"fancybox\" rel=\"gallery\" title=\"".$title."\"><img src=".$imgDir.$_GET['entry'].".png></a></div>";
+				if($txtExist === true){ //only display this container if text file exists
+					echo "<div id=\"image-container\">";
+						//display the image for the entry displayed on the secondary grid
+						$imgDir = "images/entries_img/";
+						if(file_exists($imgDir.$_GET['entry'].".jpg"))
+							echo "<div id=\"wrapper\"><a href=\"".$imgDir.$_GET['entry'].".jpg\" class=\"fancybox\" rel=\"gallery\" title=\"".$title."\"><img src=".$imgDir.$_GET['entry'].".jpg></a></div>";
+						if(file_exists($imgDir.$_GET['entry'].".png"))
+							echo "<div id=\"wrapper\"><a href=\"".$imgDir.$_GET['entry'].".png\" class=\"fancybox\" rel=\"gallery\" title=\"".$title."\"><img src=".$imgDir.$_GET['entry'].".png></a></div>";
 
-					//display the images stored in the image array
-					$i=0;
-					while($i < sizeof($stack)){
-						$filename = pathinfo($dir.$stack[$i])['filename'];
-						echo "<div id=\"wrapper\"><a href=\"".$dir.$stack[$i]."\" class=\"fancybox\" rel=\"gallery\" title=\"".$filename."\"><img src=".$dir.$stack[$i]."></a></div>"; 
-						$i++;
-					}
-				echo "</div>"; //end image-container
+						//display the images stored in the image array
+						$i=0;
+						while($i < sizeof($stack)){
+							$filename = pathinfo($dir.$stack[$i])['filename'];
+							echo "<div id=\"wrapper\"><a href=\"".$dir.$stack[$i]."\" class=\"fancybox\" rel=\"gallery\" title=\"".$filename."\"><img src=".$dir.$stack[$i]."></a></div>"; 
+							$i++;
+						}
+					echo "</div>"; //end image-container
+				}
 			?>
 		</div>
+
 
 		<!--Secondary Header-->
 		<h1 class="divider">Thoughts</h1>

@@ -17,6 +17,13 @@ body{
 	margin-right: 1.3em;
 }
 
+#error-message{
+	background-color: IVORY;
+	width:auto;
+	padding:4em 5em; /* adjust the width of the text */
+	text-align: center;
+}
+
 #primary .divider{
 	width:100%;
 	margin-left:0;
@@ -90,7 +97,6 @@ body{
 .entry .overlay{
 	opacity:1;
 }
-
 .entry .overlay a.dropdown{
 	opacity:1;
 	top:50%;
