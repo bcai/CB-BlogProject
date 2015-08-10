@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>C&B | Redeemed Thought</title>
+	<title>C&amp;B | Redeemed Thought</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
@@ -22,8 +22,8 @@
 		<!--Header (Logo & Title)-->
 		<header>
 			<div id="logobox">
-				<div id="logo"><img src="../images/CB.png" height="37" width="93" alt="C&B"></div>
-				<div id="overlay"><a href="../index.php"><img src="../images/CBblue.png" height="37" width="93" alt="C&B"></a></div>
+				<div id="logo"><img src="../images/CB.png" height="37" width="93" alt="C&amp;B"></div>
+				<div id="overlay"><a href="../index.php"><img src="../images/CBblue.png" height="37" width="93" alt="C&amp;B"></a></div>
 			</div>
 			<div id="title"><h1>Redeemed Thought</h1></div>
 			<div id="drawer"><ul id="nav">
@@ -67,7 +67,7 @@
 						echo "<h1 class=\"divider\">".$title."</h1>";
 
 						//create the date for text-container
-						$formatDate = date_create(str_replace('.', '-', $_GET['entry']));
+						$formatDate = date_create(str_replace('.', '/', $_GET['entry']));
 						$date = date_format($formatDate, 'F jS, Y');
 						echo "<h1 id=\"date\">".$date."</h1>";
 
@@ -80,7 +80,7 @@
 				}
 				else{ // display error message if entry text not located
 					echo "<div id=\"error-message\">".
-						 	"<h2>Sorry! This entry does not exist or has been removed.</h2>".
+						 	"<h2>Sorry! This entry does not yet exist or has been removed.</h2>".
 						 "</div>";
 				}
 
@@ -146,7 +146,7 @@
 
 	<!--Footer-->
 	<hr style="visibility:hidden;">
-	<div id="footer">&copy; 2015 C&B Redeemed Thought. All Rights Reserved.</div>
+	<div id="footer">&copy; 2015 C&amp;B Redeemed Thought. All Rights Reserved.</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
 	<script type="text/javascript" src="../js/header.js"></script>
@@ -155,34 +155,34 @@
 
 	<!-- Collage -->
     <script type="text/javascript">
-    // All images need to be loaded for this plugin to work so
-    // we end up waiting for the whole window to load in this example
-    $(window).load(function () {
-        $(document).ready(function(){
-            collage();
-        });
-    });
-    // Here we apply the actual CollagePlus plugin
-    function collage() {
-        $('.collage').removeWhitespace().collagePlus(
-            {
-                'fadeSpeed'     : 2000,
-                'targetHeight'  : 200,
-                'effect'        : 'effect-2',
-                'direction'     : 'vertical',
-                'allowPartialLastRow':true
-            }
-        );
-    };
-    // This is just for the case that the browser window is resized
-    var resizeTimer = null;
-    $(window).bind('resize', function() {
-        // hide all the images until we resize them
-        $('.collage .image-wrapper').css("opacity", 0);
-        // set a timer to re-apply the plugin
-        if (resizeTimer) clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(collage, 200);
-    });
+	    // All images need to be loaded for this plugin to work so
+	    // we end up waiting for the whole window to load in this example
+	    $(window).load(function () {
+	        $(document).ready(function(){
+	            collage();
+	        });
+	    });
+	    // Here we apply the actual CollagePlus plugin
+	    function collage() {
+	        $('.collage').removeWhitespace().collagePlus(
+	            {
+	                'fadeSpeed'     : 2000,
+	                'targetHeight'  : 230,
+	                'effect'        : 'effect-4',
+	                'direction'     : 'horizontal',
+	                'allowPartialLastRow':true
+	            }
+	        );
+	    };
+	    // This is just for the case that the browser window is resized
+	    var resizeTimer = null;
+	    $(window).bind('resize', function() {
+	        // hide all the images until we resize them
+	        $('.collage .image-wrapper').css("opacity", 0);
+	        // set a timer to re-apply the plugin
+	        if (resizeTimer) clearTimeout(resizeTimer);
+	        resizeTimer = setTimeout(collage, 200);
+	    });
     </script>
 
 

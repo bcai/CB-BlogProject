@@ -179,13 +179,13 @@
 }
 
 .slide:nth-child(1){
-	background-image:url(https://s3.amazonaws.com/Challies_VisualTheology/FruitOfTheSpirit/FruitOfTheSpirit-1366x768.jpg);
+	background-image:url(../images/img1.jpg);
  }
 
 .slide:nth-child(2){
-	background-image:url(../images/Spurgeon.jpg);
+	background-image:url(../images/img2.jpg);
 }
 
 .slide:nth-child(3){
-	background-image:url(../images/Love.jpg);
+	background-image:url(../images/img3.jpg);
  }

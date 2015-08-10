@@ -42,7 +42,6 @@
 	color: white;
 }
 #drawer{
-	position:relative;
 	z-index: 99;
 	float:right;
 	margin-top: 2.7em;
