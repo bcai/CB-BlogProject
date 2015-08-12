@@ -3,3 +3,11 @@ Entries to the blog will be written in .txt files.
 Entry text and corresponding img files will be manually added to "entries" folder.
 Entries will be read into an existing html/css template via a PHP loop, corresponding to the images/entries img file.
 
+Image Optimization:
+Primary Images - 1280x720px
+Secondary Grid Images - 250x250px (or vice versa)
+Entry Page Images - 380x540px (or vice versa) 
+
+Drawer Links:
+The "links.txt" in each of the drawer-links' folders is used to add URLs corresponding to each image (in-order) in the folder.
+Aside from the links.txt, each corresponding text file in each drawer-link folder must have the same name as the containing folder (ie. "about.txt" in "About" folder).

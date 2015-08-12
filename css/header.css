@@ -64,6 +64,11 @@
 	text-align: right;
 	cursor:pointer;
 
+	/* 	font-size: 3em;
+		font-weight: bold;
+		margin-bottom: -0.27em;
+	*/
+
 	-o-transition:.5s;
 	-ms-transition:.5s;
 	-moz-transition:.5s;

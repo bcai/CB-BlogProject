@@ -27,9 +27,9 @@
 			</div>
 			<div id="title"><h1>Redeemed Thought</h1></div>
 			<div id="drawer"><ul id="nav">
-				<li><a href="#">The Gospel</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Resources</a></li>
+				<li><a href="../drawer.php?drawer=gospel">The Gospel</a></li>
+				<li><a href="../drawer.php?drawer=about">About</a></li>
+				<li><a href="../drawer.php?drawer=resources">Resources</a></li>
 			</ul></div>
 		</header>
 
