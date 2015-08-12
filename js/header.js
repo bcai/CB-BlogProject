@@ -1,7 +1,7 @@
 /* Header js file */
 
 $(document).ready(function() {
-	$("#nav").addClass("js").after('<div id="menu">&#9776;</div>'); // &#x2261;
+	$("#nav").addClass("js").after('<div id="menu">&#x2261;</div>'); // &#9776;
 	$("#menu").click(function(){
 		$("#nav").slideToggle();
 	});
