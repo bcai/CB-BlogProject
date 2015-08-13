@@ -113,7 +113,8 @@
 
                         //display the images stored in the image array
                         $i=0;
-                        while($i < sizeof($stack)){
+                        $size = sizeof($stack);
+                        while($i < $size){
                             $filename = pathinfo($dir.$stack[$i])['filename'];
                             echo "<div id=\"wrapper\"><a href=\"".$links[$i]."\" title=\"".$links[$i]."\"><img src=".$dir.$stack[$i]."></a></div>"; 
                             $i++;
