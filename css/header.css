@@ -2,32 +2,40 @@
 
 
 /* <-- Header --> */
+header{
+	display:table;
+	width:90%;
+	margin-left:5%;
+	margin-right:5%;
+}
 
-#logo, #title, #nav{
-	display: inline-block;
+#logobox, #title, #drawer{
+	display: table-cell;
 	max-height: 110px;
 }
 #logobox{
 	position:relative;
+	width:12%;
 }
 #logo{
-	float: left;
-	width: 13.5%;
-	margin-top: 2.7em; /* align logo & title */
-	margin-left:5%;
+	/*float: left;*/
+	/*width: 13.5%;
+	margin-top: 2.7em;
+	margin-left:5%;*/
+	margin-bottom:-2.55em;
 	z-index:0;
 }
 #overlay{
 	display:none;
 	position:absolute;
-	margin-top: 2.7em;
-	margin-left: 5%;
+	/*margin-top: 2.7em;
+	margin-left: 5%;*/
 	z-index: 1;
 }
 
 #title{
-	float: left;
-	width: 66%;
+	/*float: left;*/
+	width: auto;
 	margin-top:2em;
 	text-align: center;
 	font-family: sans-serif;
@@ -43,19 +51,20 @@
 }
 #drawer{
 	z-index: 99;
-	float:right;
 	margin-top: 2.4em; /* 2em perfect for mobile */
-	margin-right: 5%;
+	/*margin-right: 5%;*/
+	display:block; float: right; position: relative;
 }
 #nav{
 	float:right;
 	padding-left:0px;
+	position:absolute; top:70%; right:0;
+	/*background-color: rgba(0,0,0,0.4);*/
 
 }
 #nav.js{
 	display:none;
 	text-align:right;
-	margin-bottom: 2px; /* spacing between nav button and menu */
 }
 #menu{
 /*
