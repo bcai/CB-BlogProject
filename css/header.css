@@ -11,30 +11,26 @@ header{
 
 #logobox, #title, #drawer{
 	display: table-cell;
-	max-height: 110px;
 }
 #logobox{
 	position:relative;
-	width:12%;
+	width:8%;
 }
 #logo{
-	/*float: left;*/
-	/*width: 13.5%;
-	margin-top: 2.7em;
-	margin-left:5%;*/
-	margin-bottom:-2.55em;
+	margin-bottom:-2.3em;
 	z-index:0;
+}
+#logo img{
+	vertical-align: middle;
+	margin-top: -1em;
 }
 #overlay{
 	display:none;
 	position:absolute;
-	/*margin-top: 2.7em;
-	margin-left: 5%;*/
 	z-index: 1;
 }
 
 #title{
-	/*float: left;*/
 	width: auto;
 	margin-top:2em;
 	text-align: center;
@@ -43,42 +39,37 @@ header{
 	letter-spacing: 7.5px;
 	text-transform: uppercase;
 }
-#title>h1{
-	margin: 0;
-	margin-top: 1em; /* align logo & title */
-	margin-bottom: 0px;
+#title h1{
+	margin-top: 0.4em;
+	margin-bottom: 0;
 	color: white;
+	line-height:2em;
 }
 #drawer{
 	z-index: 99;
-	margin-top: 2.4em; /* 2em perfect for mobile */
-	/*margin-right: 5%;*/
-	display:block; float: right; position: relative;
+	float: right;
+	position: relative;
 }
 #nav{
 	float:right;
 	padding-left:0px;
-	position:absolute; top:70%; right:0;
-	/*background-color: rgba(0,0,0,0.4);*/
+	position:absolute;
+	top:140%;
+	right:0;
+	background-color: rgba(0,0,0,0.4);
+	padding:10px;
+	border-radius: 5px;
 
 }
 #nav.js{
 	display:none;
-	text-align:right;
+	text-align:center;
 }
 #menu{
-/*
 	color:#fff;
-	display: block;
-	font-size:2em;
-	text-align: right;
-	cursor:pointer;
-*/
-	color:#fff;
-	display:block;
  	font-size: 3em;
 	font-weight: bold;
-	margin-bottom: -0.2em;
+	margin-bottom: -0.4em;
 	text-align: right;
 	cursor:pointer;
 	

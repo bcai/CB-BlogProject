@@ -37,13 +37,13 @@
 				<!-- Slider Panels -->
 				<div class="inner">
 					<div class="slide active">
-						<h1></h1>
+						<img src="../images/img1.jpg"/>
 					</div>
 					<div class="slide">
-						<h1></h1>
+						<img src="../images/img2.jpg"/>
 					</div>
 					<div class="slide">
-						<h1><h1>
+						<img src="../images/img3.jpg"/>
 					</div>
 				</div>
 

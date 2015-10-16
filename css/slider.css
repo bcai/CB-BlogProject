@@ -3,7 +3,7 @@
 .carousel{
 	width: 100%;
 	position: relative;
-	padding-top: 60%;
+	padding-top: 45%;
 	overflow: hidden;
 
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
@@ -212,15 +212,8 @@
   padding-top:0%; /*original:25%*/
   background-size:cover;
 }
-
-.slide:nth-child(1){
-	background-image:url(../images/img1.jpg);
- }
-
-.slide:nth-child(2){
-	background-image:url(../images/img2.jpg);
+.slide img{
+  width:100%; /* maintains full sizing of image */
+  max-height:100%;
+  height:auto;
 }
-
-.slide:nth-child(3){
-	background-image:url(../images/img3.jpg);
- }
