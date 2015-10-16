@@ -136,6 +136,8 @@
 	            $(".close-overlay").removeClass("hidden");
 	            // handle the adding of hover class when clicked
 	            $(".image-wrapper").click(function(e){
+	            	e.preventDefault();
+	    			e.stopPropagation();
 	                if (!$(this).hasClass("hover")) {
 	                    $(this).addClass("hover");
 	                }

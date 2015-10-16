@@ -5,6 +5,12 @@ $(document).ready(function() {
 	$("#menu").click(function(){
 		$("#nav").slideToggle();
 	});
+	$("#menu").mouseenter(function(){
+		$("#nav").stop().slideDown(500);
+	});
+	$("#drawer").mouseleave(function(){
+		$("#nav").stop().slideUp(450);
+	});
 
 
 	$("#logobox").mouseenter(function(){
